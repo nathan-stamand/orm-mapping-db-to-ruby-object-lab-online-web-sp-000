@@ -81,7 +81,12 @@ class Student
     LIMIT 1 
     SQL
     
-    self.new_from_db(DB[:conn].execute(sql))
+    row = DB[:conn].execute(sql)
+    student = self.new
+    student.name = row[1]
+    student.grade = row[2]
+    student.id = row[0]
+    student
   end
   
   def save
