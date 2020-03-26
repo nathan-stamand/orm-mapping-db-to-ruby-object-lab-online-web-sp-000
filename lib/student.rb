@@ -81,7 +81,9 @@ class Student
     LIMIT 1 
     SQL
     
-    new_from_db(DB[:conn].execute(sql))
+    DB[:conn].execute(sql).each do |row|
+      new_from_db(row)
+    end
   end
   
   def save
