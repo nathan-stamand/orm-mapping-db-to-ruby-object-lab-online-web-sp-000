@@ -81,7 +81,7 @@ class Student
     LIMIT 1 
     SQL
     
-    new_from_db(DB[:conn].execute(sql))
+    new_from_db(DB[:conn].execute(sql)).id
   end
   
   def save
