@@ -82,11 +82,8 @@ class Student
     SQL
     
     row = DB[:conn].execute(sql)
-    student = self.new
-    student.name = row[1]
-    student.grade = row[2]
-    student.id = row[0]
-    student
+    row[0]
+    
   end
   
   def save
