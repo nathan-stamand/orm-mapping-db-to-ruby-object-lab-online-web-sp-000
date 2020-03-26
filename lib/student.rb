@@ -65,6 +65,7 @@ class Student
     sql = <<-SQL 
     SELECT * FROM students 
     WHERE grade = 10 
+    ORDER BY id
     LIMIT ?
     SQL
     
