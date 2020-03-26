@@ -30,7 +30,7 @@ class Student
     LIMIT 1 
     SQL
     
-    DB[:conn].exectute(sql, name)
+    DB[:conn].exectute(sql, name).map do |name|
     
   end
   
